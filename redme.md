@@ -74,7 +74,79 @@ public class Faculdade {
 
 ```
 
-> Exercicio 6 - Escolher dois pontos de comércio (loja de sapato, feira livre, farmácia, concessionária de carro ou moto, loja de roupas, etc), verificar os objetos vendidos e realizar a abstração deles.
+> Exercicio 6 
 
+AppSistema.java
 
+```
+package org.example.fateclp;
+
+class Feira {
+    String produto = "Manga";
+    double preco = 5.50;
+    int estoque = 100;
+
+    void vender() { if (estoque > 0) estoque--; }
+    void aplicarDesconto() { preco -= 1.0; }
+    void resetarPreco() { preco = 5.50; }
+}
+
+class Salao {
+    String servico = "Corte";
+    double valor = 45.0; // Atributo: Valor do corte
+    boolean aberto = true;
+
+    void agendar() { System.out.println("Agendamento realizado!"); }
+    void realizarServico() { System.out.println("Realizando o serviço: " + servico); }
+    void alternarStatus() { aberto = !aberto; }
+}
+
+class Farmacia {
+    String remedio = "Aspirina";
+    int unidades = 60;
+    boolean receitaValidada = false; // Atributo: Status da receita
+
+    void venderMedicamento() { if (unidades > 0) unidades--; }
+    void validarReceita() { receitaValidada = true; }
+    void reporEstoque() { unidades += 20; }
+}
+
+```
+
+Modelos.java
+
+```
+package org.example.fateclp;
+
+class Feira {
+    String produto = "Manga";
+    double preco = 5.50;
+    int estoque = 100;
+
+    void vender() { if (estoque > 0) estoque--; }
+    void aplicarDesconto() { preco -= 1.0; }
+    void resetarPreco() { preco = 5.50; }
+}
+
+class Salao {
+    String servico = "Corte";
+    double valor = 45.0; // Atributo: Valor do corte
+    boolean aberto = true;
+
+    void agendar() { System.out.println("Agendamento realizado!"); }
+    void realizarServico() { System.out.println("Realizando o serviço: " + servico); }
+    void alternarStatus() { aberto = !aberto; }
+}
+
+class Farmacia {
+    String remedio = "DorFlex";
+    int unidades = 60;
+    boolean receitaValidada = false; // Atributo: Status da receita
+
+    void venderMedicamento() { if (unidades > 0) unidades--; }
+    void validarReceita() { receitaValidada = true; }
+    void reporEstoque() { unidades += 20; }
+}
+
+```
  
