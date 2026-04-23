@@ -11,9 +11,7 @@ public class Cliente {
         this.emailContato = email;
     }
 
-    public String cadastrarDependente(String nomeDep) {
-        return "Dependente " + nomeDep + " vinculado a " + this.nome;
-    }
+    public String getNome() { return nome; }
 
     public String consultarHistoricoCompras() {
         return "Histórico de compras carregado para o CPF: " + cpf;

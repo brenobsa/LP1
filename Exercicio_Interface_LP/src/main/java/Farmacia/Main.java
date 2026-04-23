@@ -12,7 +12,7 @@ public class Main extends Application {
         TabPane tabPane = new TabPane();
         FarmaciaController controller = new FarmaciaController();
 
-        // Criando as Abas
+
         Tab tabMed = new Tab("Medicamentos");
         VBox vBoxMed = new VBox(10);
         controller.configurarAbaMedicamento(vBoxMed);

@@ -11,15 +11,16 @@ public class Profissional {
         this.comissaoPercentual = comissao;
     }
 
+
     public double calcularComissao(double valorServico) {
-        return valorServico * (comissaoPercentual / 100);
+        return valorServico * (this.comissaoPercentual / 100);
     }
+
 
     public String obterPerfil() {
         return nome + " (" + especialidade + ")";
     }
 
-    public void atualizarComissao(double novaComissao) {
-        this.comissaoPercentual = novaComissao;
-    }
+
+    public String getNome() { return nome; }
 }

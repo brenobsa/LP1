@@ -32,7 +32,7 @@ public class Main extends Application {
         tabPane.setTabClosingPolicy(TabPane.TabClosingPolicy.UNAVAILABLE);
 
         Scene scene = new Scene(tabPane, 450, 400);
-        primaryStage.setTitle("Salon Manager - FATEC");
+        primaryStage.setTitle("Salão");
         primaryStage.setScene(scene);
         primaryStage.show();
     }

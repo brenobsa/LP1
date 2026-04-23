@@ -2,13 +2,12 @@ package Feira;
 
 public class Banca {
     private String nomeBanca;
-    private String setor; // Ex: Frutas, Legumes, Pastéis
-    private boolean aberta;
+    private String setor;
+    private boolean aberta = false;
 
     public Banca(String nome, String setor) {
         this.nomeBanca = nome;
         this.setor = setor;
-        this.aberta = false;
     }
 
     public void alternarStatusBanca() {
@@ -16,10 +15,9 @@ public class Banca {
     }
 
     public String gerarAnuncioChamada() {
-        return "Olha a " + setor.toLowerCase() + " freguês! Banca " + nomeBanca + " com ofertas!";
+        String status = aberta ? "ABERTA" : "FECHADA";
+        return "Banca " + nomeBanca + " (" + setor + ") está " + status + "!";
     }
 
-    public boolean validarSetor() {
-        return setor != null && !setor.isEmpty();
-    }
+    public String getNomeBanca() { return nomeBanca; }
 }

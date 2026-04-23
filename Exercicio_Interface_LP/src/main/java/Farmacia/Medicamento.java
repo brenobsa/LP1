@@ -1,30 +1,25 @@
 package Farmacia;
 
 public class Medicamento {
-    private String nomeGenerico;
+    private String nome;
     private double preco;
-    private int quantidadeEstoque;
+    private int estoque;
 
     public Medicamento(String nome, double preco, int estoque) {
-        this.nomeGenerico = nome;
+        this.nome = nome;
         this.preco = preco;
-        this.quantidadeEstoque = estoque;
+        this.estoque = estoque;
     }
 
-    public boolean verificarDisponibilidade() {
-        return quantidadeEstoque > 0;
-    }
+    public boolean verificarDisponibilidade() { return estoque > 0; }
 
     public void aplicarDesconto(double percentual) {
         this.preco -= this.preco * (percentual / 100);
     }
 
-    public void solicitarReposicao(int quantidade) {
-        this.quantidadeEstoque += quantidade;
-    }
+    public void solicitarReposicao(int qtd) { this.estoque += qtd; }
 
-    // Getters para a interface ler os dados
-    public String getNomeGenerico() { return nomeGenerico; }
+    public String getNomeGenerico() { return nome; }
     public double getPreco() { return preco; }
-    public int getQuantidadeEstoque() { return quantidadeEstoque; }
+    public int getQuantidadeEstoque() { return estoque; }
 }

@@ -1,25 +1,21 @@
 package Farmacia;
 
 public class Pedido {
-    private int numeroPedido;
-    private String dataVenda;
-    private double valorTotal;
+    private int numero;
+    private double valor;
 
-    public Pedido(int numero, String data, double valor) {
-        this.numeroPedido = numero;
-        this.dataVenda = data;
-        this.valorTotal = valor;
+    public Pedido(int numero, double valor) {
+        this.numero = numero;
+        this.valor = valor;
     }
 
     public String adicionarItem(String item) {
-        return "Item " + item + " adicionado ao pedido #" + numeroPedido;
+        return "Item " + item + " adicionado ao #" + numero;
     }
 
     public String finalizarPagamento(String metodo) {
-        return "Venda de R$" + valorTotal + " paga via " + metodo;
+        return "Pedido #" + numero + " (R$" + valor + ") pago via " + metodo;
     }
 
-    public void cancelarPedido() {
-        this.valorTotal = 0;
-    }
+    public void cancelarPedido() { this.valor = 0; }
 }
