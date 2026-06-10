@@ -12,27 +12,26 @@ public class Main extends Application {
         TabPane tabPane = new TabPane();
         FarmaciaController controller = new FarmaciaController();
 
-
         Tab tabMed = new Tab("Medicamentos");
-        VBox vBoxMed = new VBox(10);
+        VBox vBoxMed = new VBox();
         controller.configurarAbaMedicamento(vBoxMed);
         tabMed.setContent(vBoxMed);
 
         Tab tabCli = new Tab("Clientes");
-        VBox vBoxCli = new VBox(10);
+        VBox vBoxCli = new VBox();
         controller.configurarAbaCliente(vBoxCli);
         tabCli.setContent(vBoxCli);
 
         Tab tabPed = new Tab("Pedidos");
-        VBox vBoxPed = new VBox(10);
+        VBox vBoxPed = new VBox();
         controller.configurarAbaPedido(vBoxPed);
         tabPed.setContent(vBoxPed);
 
         tabPane.getTabs().addAll(tabMed, tabCli, tabPed);
         tabPane.setTabClosingPolicy(TabPane.TabClosingPolicy.UNAVAILABLE);
 
-        Scene scene = new Scene(tabPane, 400, 350);
-        primaryStage.setTitle("Farmácia");
+        Scene scene = new Scene(tabPane, 420, 520);
+        primaryStage.setTitle("Farmácia Comercial");
         primaryStage.setScene(scene);
         primaryStage.show();
     }
